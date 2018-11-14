@@ -1,14 +1,68 @@
 <!DOCTYPE html>
 <html>
-<script TYPE= "text/javascript">
-    function verifica() {
-        if (document.getElementById('password').value=="Apple26") window.open("https://jacopojamous23.github.io/")}
-    
-   </script>
-    </html>
-    <p> Nome : <input type="text" name="nome"> </p>
-    <p> Cognome : <input type= "text" name="cognome"> </p>
-    <p> Password : <input type= "password" id ="password" maxlenght="7" size="18" value"" name="mioTesto" /> </p>
-     <p> Accedi : <input type= "button" value="vai!!" onClick="verifica()"/>
-        </form>
+<head>
 
+ <!DOCTYPE html>
+<html>
+<head>
+
+  <head>
+  <body>
+    <h1 id="titolo"> ESTRAZIONE A SORTE </h1>
+    <p> puoi interrogare solo se inserisci la Password</p>
+<p class ="dati"> Docente : <input type="text" id="cognome" name="nome" /> </p>
+<p class ="dati"> Password : <input type="Password" id="Password" maxlength="4" size="18" value="" name="Password" /> </p>
+
+
+   <input type="button" id="button" value="ESTRAI!!!" onClick="scegli()"/>
+  
+
+   <br><br><label>L'INTERROGATO DI OGGI E' 
+   <input id="nome" type="text">
+   </label>
+   
+   
+   
+   <div>
+   <ul>
+   <li>IDAN</li>
+   <li>ALEX</li>
+   <li>LEAM</li>
+   <li>SACHA</li>
+   <li>MICHELLE</li>
+   <li>ISAAC</li>
+   <li>JACOPO</li>
+   <li>GADI</li>
+   <li>NOEMI</li>
+   <li>DAVID</li>
+   <li>GABRIEL</li>
+   <li>LEO</li>
+   <li>NICOLO'</li>
+   <li>ROMINA</li>
+   <li>SIMON</li> 
+   </ul>
+   </div>
+  
+   
+  <script>
+    var titolo = document.getElementById("titolo");
+    console.log(titolo);
+    titolo.style.backgroundColor = "orange";
+    titolo.style.textAlign = "center";
+    
+    var lista = ["IDAN","ALEX","LEAM","SACHA","MICHELLE","ISAAC","JACOPO","GADI","NOEMI","DAVID","GABRIEL","LEO","NICOLO'","ROMINA","SIMON"];
+    
+    function scegli() {
+     var x = Math.floor(Math.random() * lista.length); 
+     document.getElementById("nome").value += "," + lista[x]
+     var interrogato = document.getElementsByTagName("li");
+     interrogato[x].style.backgroundColor = "yellow";
+     }
+    
+   
+</script>
+    
+   
+    
+</body>
+</html>    
